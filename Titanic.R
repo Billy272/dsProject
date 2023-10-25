@@ -1,3 +1,3 @@
 data <- read.csv("titanic.csv")
 
-print(data.head())
+print(data.head(10))
