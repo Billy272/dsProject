@@ -1,12 +1,14 @@
+library(ggplot2)
+
 # Data for pie chart
-x <- c(21,62,10,53)
-labels <- c("London", "New York", "Singapore", "Mumbai")
+data <- data.frame(
+  x <- c(21,62,10,53),
+  labels <- c("London", "New York", "Singapore", "Mumbai")
+)
 
-#Chart file name
-png(file = "3d_pie.png")
-
-#Plotting pie chart
-pie(x, labels, main = "City pie chart", col = rainbow(length(x)))
-
-#Saving file
-dev.off()
+# Pie chart
+ggplot(data, aes(x="", y=x, fill=labels)) +
+  geom_bar(stat="identity", width =1) +
+  coord_polar(theta = "y") +
+  theme_void() +
+    labs(title = "Pie Chart of Cities", x = "Cities", y = "Percentage")
