@@ -1,10 +1,12 @@
-library(plotrix)
-
+# Data for pie chart
 x <- c(21,62,10,53)
 labels <- c("London", "New York", "Singapore", "Mumbai")
 
-png(file = "3d_pie.png", width = 600, height = 600)
+#Chart file name
+png(file = "3d_pie.png")
 
-pie3D(x, labels = lbl, explode = 0.1, main = "3D Pie Chart for Cities")
+#Plotting pie chart
+pie(x, labels, main = "City pie chart", col = rainbow(length(x)))
 
+#Saving file
 dev.off()
