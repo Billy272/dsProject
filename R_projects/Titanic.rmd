@@ -1,0 +1,14 @@
+````
+Creating dataframes and graphs using Titanic data.
+````
+```{r}
+library(ggplot2)
+
+#import titanic data from website
+titanic <- read.csv("http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/titanic3.csv")
+
+ggplot(titanic, aes(x="", y=Age, fill=Survived)) +
+  geom_boxplot(fill = "lightblue", color = "blue") +
+  labs(title = "Survival Rate by Age", x = "", y = "Age") +
+        theme_minimal()
+```
