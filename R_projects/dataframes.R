@@ -8,3 +8,6 @@ height <- c(180,187,194,172,175)
 df <- data.frame(names,date_born, age, height)
 
 print(df)
+
+#plot age vs height
+plot(df$age, df$height, main = "Age vs Height", xlab = "Age", ylab = "Height", pch = 19, col = "blue")
