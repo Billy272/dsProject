@@ -1,7 +1,8 @@
 library(ggplot2)
 
-data <- read.csv("train.csv")
+titanic <- data("Titanic", package = "datasets")
 
-ggplot(data, aes(x = Age, y = Fare)) + geom_boxplot(fill = "lightblue", color = "blue") + labs(title = "Boxplot of Age vs Fare", x = "Age", y = "Fare")+
-  theme_minimal()
-
+# Bar chart
+ggplot(titanic, aes(x = factor(Pclass))) +
+  geom_bar(fill = "steelblue") +
+  labs(title = "Bar Chart of Pclass", x = "Pclass", y = "Count")
