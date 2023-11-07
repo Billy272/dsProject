@@ -1,4 +1,4 @@
-City, "Region", "Country", "AirQuality", "WaterPollution"
+City, Region, Country, AirQuality, WaterPollution
 New York City, "New York", "United States of America",46.81603774,49.5049505
 "Washington, D.C.", "District of Columbia", "United States of America",66.12903226,49.10714286
 San Francisco, "California", "United States of America",60.51401869,43
